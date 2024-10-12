@@ -3,193 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝐒𝐀𝐇𝐉𝐀𝐃 𝐁𝐈𝐎</title>
+    <title>Birthday Wishes</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff;
-            background: #000;
+            background-color: #ffe4e1;
+            overflow: hidden;
         }
-        .video-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
+        section {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-        .container {
-            max-width: 400px;
-            margin: 20px auto;
-            padding: 15px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            height: 100vh;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             text-align: center;
-            animation: fadeIn 1s ease-in-out;
         }
-        h1, h2, p {
-            color: #fff;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px silver;
-            animation: textGlow 0.8s ease-in-out infinite;
-            margin-bottom: 10px;
-            font-size: 1.2em;
-            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p {
-            font-size: 0.85em;
-        }
-        .inline-details {
+        section:target {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
         }
-        .inline-details div {
-            width: 33%;
-            text-align: center;
-            animation: textGlow 0.8s ease-in-out infinite;
+        #page1 {
+            display: flex;
+            background-color: #ffc0cb;
         }
-        .place {
-            font-size: 0.8em; /* Smaller text for Place */
-        }
-        .best-friend {
-            font-size: 0.8em; /* Smaller text for Best Friend */
-        }
-        .section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .section ul li {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 6px;
-            margin-bottom: 6px;
-            border-radius: 5px;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px silver;
-            animation: textGlow 0.8s ease-in-out infinite;
-            font-size: 0.85em;
-        }
-        a {
-            color: #fff;
+        #page1 a {
             text-decoration: none;
-            text-shadow: 0 0 10px silver;
-            animation: textGlow 0.8s ease-in-out infinite;
         }
-        a:hover {
-            color: #00ffcc;
-        }
-        .title {
-            text-align: center;
-            margin-bottom: 15px;
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #fff;
-            text-shadow: 0 0 15px silver;
-            animation: textGlow 0.8s ease-in-out infinite;
-            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        img {
+        #page1 button {
+            padding: 30px;
+            font-size: 3rem;
+            background-color: #ff1493;
+            color: white;
+            border: none;
             border-radius: 50%;
-            width: 100px; /* Smaller size for the profile picture */
-            height: 100px; /* Smaller size for the profile picture */
-            margin-bottom: 15px;
-            animation: fadeIn 1s ease-in-out;
-            border: 5px solid transparent; /* Create a border for the glowing effect */
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5),
-                        0 0 20px rgba(255, 127, 0, 0.5),
-                        0 0 30px rgba(255, 255, 0, 0.5),
-                        0 0 40px rgba(0, 255, 0, 0.5),
-                        0 0 50px rgba(0, 0, 255, 0.5),
-                        0 0 60px rgba(75, 0, 130, 0.5),
-                        0 0 70px rgba(148, 0, 211, 0.5); /* Rainbow glowing effect */
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
-        /* Animation Keyframes */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        #page1 button:hover {
+            transform: scale(1.2);
         }
-        @keyframes textGlow {
-            0% { text-shadow: 0 0 10px silver, 0 0 20px silver; }
-            50% { text-shadow: 0 0 20px silver, 0 0 30px silver; }
-            100% { text-shadow: 0 0 10px silver, 0 0 20px silver; }
+        #page2 {
+            background-color: #fdf5e6;
+            position: relative;
+            overflow: hidden;
+        }
+        #gift {
+            width: 200px;
+            height: 200px;
+            background: url('https://img.icons8.com/emoji/96/gift-emoji.png') no-repeat center;
+            background-size: cover;
+        }
+        #message {
+            margin-top: -30px;
+            font-size: 4rem;
+            font-weight: bold;
+            animation: colorChange 2s infinite;
+        }
+        @keyframes colorChange {
+            0% { color: red; }
+            25% { color: blue; }
+            50% { color: green; }
+            75% { color: orange; }
+            100% { color: purple; }
+        }
+        #bhabhi-text {
+            margin-top: 10px;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 10px;
+            border: 2px solid;
+            border-image: linear-gradient(45deg, red, yellow, green, blue) 1;
+        }
+        .text-rain {
+            position: absolute;
+            top: -50px;
+            font-size: 1.5rem;
+            color: #ff69b4;
+            animation: fall 5s linear infinite;
+        }
+        .text-rain:nth-child(2) { left: 20%; animation-duration: 6s; }
+        .text-rain:nth-child(3) { left: 40%; animation-duration: 7s; }
+        .text-rain:nth-child(4) { left: 60%; animation-duration: 8s; }
+        .text-rain:nth-child(5) { left: 80%; animation-duration: 9s; }
+        @keyframes fall {
+            0% { transform: translateY(-100vh); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+        #page2 a {
+            margin-top: 20px;
+        }
+        #page2 a button {
+            padding: 30px 60px;
+            font-size: 2rem;
+            background-color: #32cd32;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+        }
+        #page3 {
+            animation: backgroundChange 10s infinite;
+            padding: 20px;
+        }
+        @keyframes backgroundChange {
+            0% { background-color: #ff6347; }
+            25% { background-color: #ffd700; }
+            50% { background-color: #40e0d0; }
+            75% { background-color: #9370db; }
+            100% { background-color: #ff6347; }
+        }
+        #emoji {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            animation: emojiChange 1s steps(1) infinite;
+        }
+        @keyframes emojiChange {
+            0% { content: '❣️'; }
+            25% { content: '🤩'; }
+            50% { content: '😍'; }
+            75% { content: '🥰'; }
+            100% { content: '❣️'; }
+        }
+        #fun-text {
+            font-size: 1.5rem;
+            color: #333;
+            text-align: center;
+            display: none;
+        }
+        #only-for-fun {
+            margin-top: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: red;
+            display: none;
         }
     </style>
 </head>
 <body>
+    <!-- Page 1 -->
+    <section id="page1">
+        <h1>Tap karo Bhabhi!</h1>
+        <a href="#page2"><button>❤️</button></a>
+    </section>
 
-    <video class="video-bg" autoplay muted loop>
-        <source src="https://cdn.glitch.global/42b61762-5226-4a25-9965-d2e029507356/6%20(1).MP4?v=1727712312654" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <!-- Page 2 -->
+    <section id="page2">
+        <div id="gift"></div>
+        <div id="message">🎉 Happy Birthday 🎂</div>
+        <div id="bhabhi-text">My Cute Bhabhi SAZMEEN</div>
 
-    <div class="container">
-        <div class="title">𝐒𝐀𝐇𝐉𝐀𝐃</div>
+        <div class="text-rain">Cute Bhabhi</div>
+        <div class="text-rain">Cute Bhabhi</div>
 
-        <img src="https://cdn.glitch.global/3e7180d8-1988-4ee3-97b6-afaf77a27e11/20241001_151713.png?v=1727776104344" alt="Profile Picture">
-        
-        <h1><a href="https://t.me/">𝐒𝐀𝐇𝐉𝐀𝐃</a></h1>
+        <a href="#page3"><button>Next</button></a>
+    </section>
 
-        <div class="inline-details">
-            <div class="place">𝗣𝗜𝗔𝗖𝗘 : 🇮🇳 ɪɴᴅɪᴀ ᴜ.ᴘ ᴊᴀᴜɴᴘᴜʀ ʙʜᴀᴡᴀɴɪɢᴀɴᴊ..... 𝗔𝗚𝗘 → 17</div>
-            <div> 𝗜 𝗹𝗼𝘃𝗲 →   𝙋𝙧𝙤𝙥𝙝𝙚𝙩 𝙈𝙪𝙝𝙖𝙢𝙢𝙖𝙙 (𝙎 𝘼.𝙒) 💚</div>
-            <div class="best-friend"><a href="https://t.me/">𝗕𝗘𝗦𝗧 𝗙𝗥𝗜𝗘𝗡𝗗 →I have a lot of friends 🗿</a></div>
-        </div>
+    <!-- Page 3 -->
+    <section id="page3">
+        <div id="emoji">❣️</div>
+        <div id="fun-text"></div>
+        <div id="only-for-fun">Only for fun 🤡</div>
+    </section>
 
-        <div class="section Social Media">
-            <h2>MY SOCIAL MEDIA ( CLICK TO OPEN )</h2>
-            <ul>
-                <li><a href="https://www.instagram.com/sahzad_04?igsh=MWM2amExOHU5aG55Mg==">INSTAGRAM </a></li>
-                <li><a href="https://wa.me/6388076088">WHATSAPP</a></li>
-                <li><a href="https://www.instagram.com/sahzad_04?igsh=MWM2amExOHU5aG55Mg==">FACEBOOK (not have)</a></li>
-                <li><a href="https://t.me/">YOUTUBE (private)</a></li>
-                <li><a href="https://t.me/">TWITTER (soon)</a></li>
-                <li><a href="https://t.me/">LINKEDIN(soon)</a></li>
-                <li><a href="https://t.me/">GITHUB(private)</a></li>
-                <li><a href="https://t.me/">TELEGRAM(private)</a></li>
-                <li><a href="https://t.me/">SNAPCHAT(not use)</a></li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>𝐇𝐎𝐁𝐁𝐘 𝐀𝐍𝐃 𝐒𝐊𝐈𝐋𝐋𝐒</h2>
-            <ul>
-                <li>𝐁.𝐂.𝐀. 𝐒𝐓𝐔𝐃𝐄𝐍𝐓 ❣️😎</li>
-                <li>singing</li>
-                <li>ᴡᴇʙ ᴍᴀᴋIɴɢ </li>
-                <li>app making</li>
-                <li>Book reading</li>
-                <li>LEARN IN YOUTUBE</li>
-                <li>ᴇᴛᴄ</li>
-            </ul>
-        </div>
+    <script>
+        const lines = [
+            "भाभी, आप तो एकदम कॉकटेल जैसी हो—थोड़ी स्वीट, थोड़ी स्ट्रॉन्ग, और पूरा मूड सेट करने वाली! 🍹😉",
+            "आपकी एक स्माइल ऐसी है कि नींद भी शर्मा कर कहती है, 'अब सोने का टाइम नहीं, बस देखो और खुश रहो!' 😜✨",
+            "घर में आप जहां होती हो, वहां का माहौल अपने-आप 'सीन बदलो' मोड पर चला जाता है—बोरियत का कोई चांस नहीं! 🎬🔥",
+            "वैसे, आपकी मौजूदगी ऐसी है कि दिल कभी-कभी सोचता है—'इतनी परफेक्ट कैसे हो सकती हैं?' 🎩❤️",
+            "आपका सबसे छोटा और सबसे सीरियसली नटखट देवर!"
+        ];
 
-        <div class="section Music">
-            <h2> 𝙁𝙖𝙫𝙤𝙪𝙧𝙞𝙩𝙚 𝙈𝙪𝙨𝙞𝙘 (click to open) </h2>
-            <ul>
-                <li><a href="https://youtu.be/7NLjTH5s8-o?si=x32oVNXzGF9CX3R7">Koi duniya e atta (Naat)</a></li>
-                <li><a href="https://youtu.be/D8PY4Iha0Q8?si=Qv4PcZ5IRl3I5eWx">Mai banda e Ashi hoon (Naat)</a></li>
-                <li><a href="https://youtu.be/Ip-0m57G80E?si=CLchzJ-45RTSBppO">kya bataon (Naat)</a></li>
-                <li><a href="https://youtu.be/hiYDpqLQRyw?si=Q287DLfx_QDc2sWv">isk ke rang (Naat)</a><li>
-                <li><a href="https://youtu.be/gmW-KUpr98M?si=VtQwD8dQ-nqkhxPw">§§§§</a><li>
-                
-                <li><a href="https://youtu.be/njoL-CQt7H4?si=K8TFbcQPmy9JYppa">Agar tum shath ho </a><li>
-                <li><a href="https://youtu.be/-GUcNi1Jmhw?si=s1rH0yJehrP4LSPy">music</a><li>
-            </ul>
-                <div class="container">
-        <div class="title">❣️THANKS FOR VISIT❣️</div>
-        </div>
-    </div>
+        let index = 0;
+        const funText = document.getElementById("fun-text");
+        const onlyForFun = document.getElementById("only-for-fun");
 
+        function showNextLine() {
+            if (index < lines.length) {
+                funText.textContent = lines[index++];
+                funText.style.display = "block";
+                setTimeout(showNextLine, 4000);
+            } else {
+                funText.style.display = "none";
+                onlyForFun.style.display = "block";
+            }
+        }
+
+        window.onload = () => showNextLine();
+    </script>
 </body>
 </html>
